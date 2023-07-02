@@ -1,1 +1,0 @@
-{"mappings":"AACAA,QAAQC,IAAKC,cAEbA,aAAaC,QAAS,OAAQ,QAE9BH,QAAQC,IAAIC,aAAaE,QAAS","sources":["src/js/02-video.js"],"sourcesContent":["\nconsole.log( localStorage );\n\nlocalStorage.setItem( \"name\", \"Dima\" );\n\nconsole.log(localStorage.getItem( 'name' ));\n"],"names":["console","log","localStorage","setItem","getItem"],"version":3,"file":"02-video.4d952301.js.map"}
