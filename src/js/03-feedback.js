@@ -5,8 +5,8 @@ const formTextareaEl = document.querySelector( '.feedback-form textarea' );
 const formSubmitBtnEl = document.querySelector( '.feedback-form button' );
 
 formEl.addEventListener( 'input', throttle(onInput, 500) );
-formSubmitBtnEl.addEventListener( 'click', submitForm );
-// якщо я пишу подію 'submit' заміть 'click' то все що знаходиться у функції submitForm чомусь не спрацьовує
+formEl.addEventListener( 'submit', submitForm );
+
 const obj = {}
 
 setInputFromLocaleStorage();
