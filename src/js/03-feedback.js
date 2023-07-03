@@ -34,11 +34,17 @@ function onInput( event ) {
   localStorage.setItem("feedback-form-state", JSON.stringify(obj));
 }
 
-function submitForm ( event ) {
-  event.preventDefault();
-  console.log(obj);
-  localStorage.removeItem( 'feedback-form-state' );
-  formInputEl.value = '';
-  formTextareaEl.value = '';
+function submitForm( event ) {
+  if ( formInputEl.value.length === 0 || formTextareaEl.value.length === 0 ) {
+    alert( 'Всі поля повинні бути заповнені!' );
+  } else {
+    event.preventDefault();
+    console.log(obj);
+    localStorage.removeItem( 'feedback-form-state' );
+    formInputEl.value = '';
+    formTextareaEl.value = '';
+    delete obj.email;
+    delete obj.message;
+  }
 }
 
